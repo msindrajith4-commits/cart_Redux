@@ -1,8 +1,12 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
 import './App.css'
+import Products from './Pages/Products'
+import Wishlist from './Pages/Wishlist'
+import Cart from './Pages/Cart'
+import PageNotFound from './Pages/PageNotFound'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+
 
 
 
@@ -13,15 +17,15 @@ function App() {
 
   return (
     <>
-    <header/>
+    <Header/>
     <Routes>
-      <Route path='/'element={<products/>}/>
+      <Route path='/'element={<Products/>}/>
       <Route path='/products/:id' element={<products/>}/>
-      <Route path='/wishlist'element={<wishlist/>}/>
-      <Route path='/cart'element={<cart/>}/>
-      <Route path='/*' element={<pageNotFound/>}/>
+      <Route path='/wishlist'element={<Wishlist/>}/>
+      <Route path='/cart'element={<Cart/>}/>
+      <Route path='/*' element={<PageNotFound/>}/>
     </Routes>
-    <footer/>
+    <Footer/>
     </>
    )
 }
